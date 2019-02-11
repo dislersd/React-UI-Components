@@ -8,12 +8,13 @@ import FooterEmail from './FooterEmail';
 const FooterContainer = () => {
   return (
     <div className='footer-container'>
-      <FooterComment />
-      <FooterReShare />
-      <FooterLike />
-      <FooterEmail />
+      <div className="comment"><FooterComment /></div>
+      <div className="reShare"><FooterReShare /></div>
+      <div className="like"><FooterLike /></div>
+      <div className='email'><FooterEmail /></div>
     </div>
   );
 }
 
 export default FooterContainer;
+
