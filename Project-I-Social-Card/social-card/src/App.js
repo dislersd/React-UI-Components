@@ -5,9 +5,9 @@ import CardContainer from './components/CardComponents/CardContainer';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className='App'>
     <HeaderContainer />
-    <CardContainer />
+    <a href='https://reactjs.org/' target='_blank'><CardContainer /></a>
     </div>
   );
 };

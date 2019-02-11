@@ -62,8 +62,10 @@ table {
 h2 {
   font-weight: bold;
   font-size: 24px;
+  color: black;
 }
 
 p {
   font-size: 16px;
+  color: black;
 }
