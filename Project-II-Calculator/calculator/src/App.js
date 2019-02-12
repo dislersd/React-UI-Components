@@ -8,11 +8,17 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      total: 0,
+      total: 4,
     }
   }
   
-  ClickEvent = () => console.log('Hello');
+  clearEvent = () => this.setState({
+    total: 0,
+  })
+
+  numberEvent = () => this.setState({
+    total: 7,
+  })
 
   render() {
     return (
@@ -20,17 +26,17 @@ class App extends React.Component {
         <CalculatorDisplay buttonStyle='display' text={this.state.total}/>
       <div className='buttons'>
         <div className="numbers">
-          <ActionButton buttonStyle={'action'} text={'clear'}/>
-          <NumberButton buttonStyle={'number'} text={7} />
-          <NumberButton buttonStyle={'number'} text={8} />
-          <NumberButton buttonStyle={'number'} text={9} />
-          <NumberButton buttonStyle={'number'} text={4} />
-          <NumberButton buttonStyle={'number'} text={5} />
-          <NumberButton buttonStyle={'number'} text={6} />
-          <NumberButton buttonStyle={'number'} text={1} />
-          <NumberButton buttonStyle={'number'} text={2} />
-          <NumberButton buttonStyle={'number'} text={3} />
-          <ActionButton buttonStyle={'action'} text={0}/>
+          <ActionButton onClick={this.clearEvent} buttonStyle={'action'} text={'clear'}/>
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={7} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={8} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={9} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={4} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={5} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={6} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={1} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={2} />
+          <NumberButton onClick={this.numberEvent} buttonStyle={'number'} text={3} />
+          <ActionButton onClick={this.numberEvent} buttonStyle={'action'} text={0}/>
         </div>
         <div className="operators">
           <NumberButton buttonStyle={'operator'} text='/' />
