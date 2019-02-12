@@ -1,10 +1,16 @@
 .display {
-  background-color: #333;
-  height: 100px;
-  width: 390px;
-  font-size: 90px;
+  font-size: 70px;
   font-weight: bold;
   color: #fff;
+}
+
+.displayContainer {
+  background-color: #333;
+  height: 100px;
+  width: 400px;
   text-align: right;
-  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
 }
